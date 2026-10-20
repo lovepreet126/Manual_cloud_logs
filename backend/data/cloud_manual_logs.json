@@ -1,0 +1,1930 @@
+[
+  {
+    "id": "log-893dfc380501",
+    "timestamp": "2026-10-20T16:42:28.258723+00:00",
+    "cloud_provider": "aws",
+    "service": "sts",
+    "action": "sts:AssumeRole",
+    "activity_name": "Assume Role (SecurityAdminRole)",
+    "status": "success",
+    "privilege_level": 3,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Privilege Escalation",
+      "technique": "Subvert Trust Controls: Assume Role",
+      "technique_id": "T1548"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAC099CC24D33B4F5E:session-c65b",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIAB5E814324FB44804",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROAE2293AF5C03A4A35",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:42:28Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:42:28Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::987654321098:role/SecurityAdminRole",
+        "roleSessionName": "session-f3726b"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIA2E01C9DDDA104DC2",
+          "expiration": "2026-10-20T16:42:28.258641+00:00"
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROA35FC368C420D44C0:session-f3726b",
+          "arn": "arn:aws:iam::987654321098:role/SecurityAdminRole/session-f3726b"
+        }
+      },
+      "requestID": "5c240729-18e9-45e4-bac7-6766abb5935f",
+      "eventID": "0ff933f9-5853-4cb5-96ab-800af30532c5",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 8,
+        "privilege_level": 3,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Privilege Escalation",
+          "technique": "Subvert Trust Controls: Assume Role",
+          "technique_id": "T1548"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "AssumeRole",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 8,
+    "tags": [
+      "aws",
+      "iam_&_escalation",
+      "success"
+    ]
+  },
+  {
+    "id": "log-bc566f5476fb",
+    "timestamp": "2026-10-20T16:42:08.205201+00:00",
+    "cloud_provider": "aws",
+    "service": "iam",
+    "action": "iam:AttachUserPolicy",
+    "activity_name": "Attach Admin Policy (AdministratorAccess)",
+    "status": "failure",
+    "privilege_level": 3,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Privilege Escalation",
+      "technique": "Account Manipulation: Additional Cloud Roles",
+      "technique_id": "T1098.003"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": "AccessDenied",
+    "error_message": "User is not authorized to perform: iam:AttachUserPolicy.",
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA7EA49BBD35C449AE:session-c65b",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA89F08F1C56E948D3",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROAACE1B296F0B1418F",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:42:08Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:42:08Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "userName": "ria_developer",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "requestID": "9f521a1c-f25b-4f3b-b165-f6cc6fbb6deb",
+      "eventID": "cf7c0d09-afba-4293-9ef2-1566618db775",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User is not authorized to perform: iam:AttachUserPolicy.",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 7,
+        "privilege_level": 3,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Privilege Escalation",
+          "technique": "Account Manipulation: Additional Cloud Roles",
+          "technique_id": "T1098.003"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "AttachUserPolicy",
+        "status": "failure"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 7,
+    "tags": [
+      "aws",
+      "iam_&_escalation",
+      "failure"
+    ]
+  },
+  {
+    "id": "log-352242a65eec",
+    "timestamp": "2026-10-20T16:41:41.953189+00:00",
+    "cloud_provider": "aws",
+    "service": "iam",
+    "action": "iam:CreateUser",
+    "activity_name": "Create IAM User (Rogue Backdoor Account)",
+    "status": "success",
+    "privilege_level": 3,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Persistence",
+      "technique": "Create Account: Cloud Account",
+      "technique_id": "T1136.003"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA5C040ADFE9054DC2:session-c65b",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA6190F9DF876E42C9",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA4C936423D24A46B1",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:41:41Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:41:41Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "userName": "backup_maintenance_svc"
+      },
+      "responseElements": {
+        "user": {
+          "path": "/",
+          "userName": "backup_maintenance_svc",
+          "userId": "AIDACA86976FF1D540CC",
+          "arn": "arn:aws:iam::987654321098:user/backup_maintenance_svc",
+          "createDate": "2026-10-20T16:41:41.953170+00:00"
+        }
+      },
+      "requestID": "0fd53927-3b6b-4eb6-a0cf-125f9762fca8",
+      "eventID": "ac363fa6-b2bc-4b49-8857-d7585505c292",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 6,
+        "privilege_level": 3,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Persistence",
+          "technique": "Create Account: Cloud Account",
+          "technique_id": "T1136.003"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "CreateUser",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 6,
+    "tags": [
+      "aws",
+      "iam_&_escalation",
+      "success"
+    ]
+  },
+  {
+    "id": "log-aabe49b5b01f",
+    "timestamp": "2026-10-20T16:41:02.163489+00:00",
+    "cloud_provider": "aws",
+    "service": "s3",
+    "action": "s3:PutObject",
+    "activity_name": "Put Object to S3 (Upload)",
+    "status": "success",
+    "privilege_level": 2,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Execution",
+      "technique": "Upload Tool / Staging",
+      "technique_id": "T1105"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROACECF308DC40544C5:session-c65b",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA64907C80890445C6",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA8682AED1CE83443D",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:41:02Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:41:02Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "bucketName": "internal-cloudtrail-logs",
+        "key": "staging/payload_stage2.sh",
+        "sizeBytes": 45120
+      },
+      "responseElements": {
+        "response": "OK"
+      },
+      "requestID": "2f5da9df-ca7d-47c1-bb4f-4a623f8967a1",
+      "eventID": "a0389c53-6a3f-4e6e-8551-6bc883c5baf2",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 5,
+        "privilege_level": 2,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Execution",
+          "technique": "Upload Tool / Staging",
+          "technique_id": "T1105"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "PutObject",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 5,
+    "tags": [
+      "aws",
+      "resource_mutation",
+      "success"
+    ]
+  },
+  {
+    "id": "log-a42af2dd8cea",
+    "timestamp": "2026-10-20T16:39:44.401901+00:00",
+    "cloud_provider": "aws",
+    "service": "s3",
+    "action": "s3:ListAllMyBuckets",
+    "activity_name": "List S3 Buckets",
+    "status": "success",
+    "privilege_level": 1,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Discovery",
+      "technique": "Cloud Storage Object Discovery",
+      "technique_id": "T1619"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROABF72072414BD4569:session-c65b",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIAA866B5E2526A4785",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA3F8191DF11C0456C",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:39:44Z",
+            "mfaAuthenticated": "false"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:39:44Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListAllMyBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {},
+      "responseElements": {
+        "response": "OK"
+      },
+      "requestID": "83e36b5f-3e54-4ea5-915b-36a8f0d4a0f4",
+      "eventID": "b0f268e4-f9dc-48ad-8857-74f83033d558",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 4,
+        "privilege_level": 1,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Discovery",
+          "technique": "Cloud Storage Object Discovery",
+          "technique_id": "T1619"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ListAllMyBuckets",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 4,
+    "tags": [
+      "aws",
+      "discovery",
+      "success"
+    ]
+  },
+  {
+    "id": "log-48b70ad06393",
+    "timestamp": "2026-10-20T16:39:16.342531+00:00",
+    "cloud_provider": "aws",
+    "service": "ec2",
+    "action": "ec2:DescribeInstances",
+    "activity_name": "Describe EC2 Instances",
+    "status": "success",
+    "privilege_level": 1,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Discovery",
+      "technique": "System Information Discovery",
+      "technique_id": "T1082"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA100053BC11B94D65:session-c65b",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA14D6FFEEB8DA4C3B",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROAB1AEE3AC408D4690",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:39:16Z",
+            "mfaAuthenticated": "false"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:39:16Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": {
+        "reservationSet": [
+          {
+            "reservationId": "r-7ce2074fcd"
+          }
+        ]
+      },
+      "requestID": "fde2662f-c15d-4880-81fa-139589509739",
+      "eventID": "87366744-5b22-4704-9187-efad63a75a71",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 3,
+        "privilege_level": 1,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Discovery",
+          "technique": "System Information Discovery",
+          "technique_id": "T1082"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "DescribeInstances",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 3,
+    "tags": [
+      "aws",
+      "discovery",
+      "success"
+    ]
+  },
+  {
+    "id": "log-94bd5f5fe2d4",
+    "timestamp": "2026-10-20T16:38:39.825789+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "success",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "unauthenticated_caller",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACCEEFDA769424570",
+        "arn": "arn:aws:iam::987654321098:user/unauthenticated_caller",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIAEE7EA9917D0F4CDF",
+        "userName": "unauthenticated_caller"
+      },
+      "eventTime": "2026-10-20T16:38:39Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "requestID": "64ac79b6-15ab-47ff-a009-46e05a6088af",
+      "eventID": "2c86a874-021f-4ee5-bfa1-eb00ba263faf",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 2,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 2,
+    "tags": [
+      "aws",
+      "authentication",
+      "success"
+    ]
+  },
+  {
+    "id": "log-4f2efecec500",
+    "timestamp": "2026-10-20T16:37:00.178854+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "failure",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "unauthenticated_caller",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": "FailedAuthentication",
+    "error_message": "Sign-in failed. Bad username or password.",
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAAB9E23184F2C47BD",
+        "arn": "arn:aws:iam::987654321098:user/unauthenticated_caller",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIA2BEAB20EDD274D04",
+        "userName": "unauthenticated_caller"
+      },
+      "eventTime": "2026-10-20T16:37:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": null,
+      "requestID": "fdfe18a6-d610-43e4-8723-f9978ce04078",
+      "eventID": "1cc06ddb-bfea-4e0a-bc49-de86eea2c922",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "errorCode": "FailedAuthentication",
+      "errorMessage": "Sign-in failed. Bad username or password.",
+      "_synth_metadata": {
+        "storyline_id": "sess-3a05c65b",
+        "sequence_index": 1,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "failure"
+      }
+    },
+    "session_id": "sess-3a05c65b",
+    "sequence_number": 1,
+    "tags": [
+      "aws",
+      "authentication",
+      "failure"
+    ]
+  },
+  {
+    "id": "log-719203e11786",
+    "timestamp": "2026-10-20T16:29:09.927824+00:00",
+    "cloud_provider": "aws",
+    "service": "cloudtrail",
+    "action": "cloudtrail:StopLogging",
+    "activity_name": "Stop CloudTrail Logging (Defense Evasion)",
+    "status": "success",
+    "privilege_level": 4,
+    "is_anomaly": true,
+    "mitre_attack": {
+      "tactic": "Defense Evasion",
+      "technique": "Impair Defenses: Disable Cloud Logs",
+      "technique_id": "T1562.008"
+    },
+    "principal": "SecurityAdminRole",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA8976A3D6E3414420:session-003e",
+        "arn": "arn:aws:iam::987654321098:role/SecurityAdminRole",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA818C8458B58C4E30",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA59FD38A868494003",
+            "arn": "arn:aws:iam::987654321098:role/SecurityAdminRole",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:29:09Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:29:09Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "name": "arn:aws:cloudtrail:us-east-1:987654321098:trail/main-security-trail"
+      },
+      "responseElements": {},
+      "requestID": "a77f8a3d-0a88-465b-b6df-8958f87bbe76",
+      "eventID": "e0cf7306-b525-4ea1-8870-0a541fd8f6ab",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-d0d2003e",
+        "sequence_index": 6,
+        "privilege_level": 4,
+        "is_anomaly": true,
+        "mitre_attack": {
+          "tactic": "Defense Evasion",
+          "technique": "Impair Defenses: Disable Cloud Logs",
+          "technique_id": "T1562.008"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "StopLogging",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-d0d2003e",
+    "sequence_number": 6,
+    "tags": [
+      "aws",
+      "high_impact_&_tampering",
+      "success"
+    ]
+  },
+  {
+    "id": "log-6ac8c6848a77",
+    "timestamp": "2026-10-20T16:29:09.923298+00:00",
+    "cloud_provider": "aws",
+    "service": "sts",
+    "action": "sts:AssumeRole",
+    "activity_name": "Assume Role (SecurityAdminRole)",
+    "status": "success",
+    "privilege_level": 3,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Privilege Escalation",
+      "technique": "Subvert Trust Controls: Assume Role",
+      "technique_id": "T1548"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA5E23CCF8327445E7:session-003e",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA2CE1F2B8C0EA4841",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROAA43601A69EA54DF2",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:29:09Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:29:09Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::987654321098:role/SecurityAdminRole",
+        "roleSessionName": "session-f68d31"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIA6C89A922832A40DF",
+          "expiration": "2026-10-20T16:29:09.923272+00:00"
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROA8DEBD0F36B0E45E4:session-f68d31",
+          "arn": "arn:aws:iam::987654321098:role/SecurityAdminRole/session-f68d31"
+        }
+      },
+      "requestID": "e15bc1e7-5563-4501-b0e3-3541950ee280",
+      "eventID": "f8885ac5-5483-4021-921c-a027088dfb16",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-d0d2003e",
+        "sequence_index": 5,
+        "privilege_level": 3,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Privilege Escalation",
+          "technique": "Subvert Trust Controls: Assume Role",
+          "technique_id": "T1548"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "AssumeRole",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-d0d2003e",
+    "sequence_number": 5,
+    "tags": [
+      "aws",
+      "iam_&_escalation",
+      "success"
+    ]
+  },
+  {
+    "id": "log-95d007a288a8",
+    "timestamp": "2026-10-20T16:29:09.917150+00:00",
+    "cloud_provider": "aws",
+    "service": "ec2",
+    "action": "ec2:RunInstances",
+    "activity_name": "Run EC2 Instance",
+    "status": "success",
+    "privilege_level": 2,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Execution",
+      "technique": "Cloud Instance Deployment",
+      "technique_id": "T1578.002"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA646A1BBD1924448A:session-003e",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA4ED729D0569B478D",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA0C869F9B8B294F28",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:29:09Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:29:09Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "instanceType": "t3.xlarge",
+        "imageId": "ami-0c55b159cbfafe1f0",
+        "count": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {
+              "instanceId": "i-03e374d4b01e04586",
+              "currentState": {
+                "code": 0,
+                "name": "pending"
+              },
+              "instanceType": "t3.xlarge"
+            }
+          ]
+        }
+      },
+      "requestID": "54080b8e-0968-4aed-a3fa-a943430e8375",
+      "eventID": "44f4b230-e223-44f4-8ae8-9ea7b4145742",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-d0d2003e",
+        "sequence_index": 4,
+        "privilege_level": 2,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Execution",
+          "technique": "Cloud Instance Deployment",
+          "technique_id": "T1578.002"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "RunInstances",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-d0d2003e",
+    "sequence_number": 4,
+    "tags": [
+      "aws",
+      "resource_mutation",
+      "success"
+    ]
+  },
+  {
+    "id": "log-7029bc006cee",
+    "timestamp": "2026-10-20T16:29:09.912924+00:00",
+    "cloud_provider": "aws",
+    "service": "ec2",
+    "action": "ec2:DescribeInstances",
+    "activity_name": "Describe EC2 Instances",
+    "status": "success",
+    "privilege_level": 1,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Discovery",
+      "technique": "System Information Discovery",
+      "technique_id": "T1082"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAAAA6072153F94EFE:session-003e",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA5F07365665FF420F",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROABC1728635D504969",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:29:09Z",
+            "mfaAuthenticated": "false"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:29:09Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": {
+        "reservationSet": [
+          {
+            "reservationId": "r-bdc6462294"
+          }
+        ]
+      },
+      "requestID": "fc03d310-ed5d-4b2b-9575-e12adb299534",
+      "eventID": "c46a0d24-2a6e-4ab7-9233-47b8a0b47000",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-d0d2003e",
+        "sequence_index": 3,
+        "privilege_level": 1,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Discovery",
+          "technique": "System Information Discovery",
+          "technique_id": "T1082"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "DescribeInstances",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-d0d2003e",
+    "sequence_number": 3,
+    "tags": [
+      "aws",
+      "discovery",
+      "success"
+    ]
+  },
+  {
+    "id": "log-33968a69d065",
+    "timestamp": "2026-10-20T16:29:09.908509+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "success",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAA94DFD6E9F6E4AE3",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIA61017B9C80B64789",
+        "userName": "ria_developer"
+      },
+      "eventTime": "2026-10-20T16:29:09Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "requestID": "37cdcc9b-ed2a-4945-90d1-064152fb0e5c",
+      "eventID": "55091727-9305-4c85-b2be-e0942a39ecd0",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-d0d2003e",
+        "sequence_index": 2,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-d0d2003e",
+    "sequence_number": 2,
+    "tags": [
+      "aws",
+      "authentication",
+      "success"
+    ]
+  },
+  {
+    "id": "log-d1e409217d5c",
+    "timestamp": "2026-10-20T16:29:09.903223+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "failure",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "unauthenticated_caller",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": "FailedAuthentication",
+    "error_message": "Invalid password",
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDA4F8607850B274B60",
+        "arn": "arn:aws:iam::987654321098:user/unauthenticated_caller",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIA7389119A9F934E06",
+        "userName": "unauthenticated_caller"
+      },
+      "eventTime": "2026-10-20T16:29:09Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": null,
+      "requestID": "eb218b2d-628c-4e94-87cd-cbc804fe2088",
+      "eventID": "3b1c11e0-8a4c-4dec-b2d9-40f5b2d7f456",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "errorCode": "FailedAuthentication",
+      "errorMessage": "Invalid password",
+      "_synth_metadata": {
+        "storyline_id": "sess-d0d2003e",
+        "sequence_index": 1,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "failure"
+      }
+    },
+    "session_id": "sess-d0d2003e",
+    "sequence_number": 1,
+    "tags": [
+      "aws",
+      "authentication",
+      "failure"
+    ]
+  },
+  {
+    "id": "log-9498724ef88c",
+    "timestamp": "2026-10-20T16:28:50.192788+00:00",
+    "cloud_provider": "aws",
+    "service": "cloudtrail",
+    "action": "cloudtrail:StopLogging",
+    "activity_name": "Stop CloudTrail Logging (Defense Evasion)",
+    "status": "success",
+    "privilege_level": 4,
+    "is_anomaly": true,
+    "mitre_attack": {
+      "tactic": "Defense Evasion",
+      "technique": "Impair Defenses: Disable Cloud Logs",
+      "technique_id": "T1562.008"
+    },
+    "principal": "SecurityAdminRole",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA4544142964C740B0:session-edaf",
+        "arn": "arn:aws:iam::987654321098:role/SecurityAdminRole",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIADB78265F96E648F9",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROAA6D579193E4E4F60",
+            "arn": "arn:aws:iam::987654321098:role/SecurityAdminRole",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:28:50Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:28:50Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "name": "arn:aws:cloudtrail:us-east-1:987654321098:trail/main-security-trail"
+      },
+      "responseElements": {},
+      "requestID": "69bb4b00-0e42-4a8d-9ddc-5e589738ac30",
+      "eventID": "467e29c2-6bfe-493a-b9f5-91b3f4605fb9",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-590bedaf",
+        "sequence_index": 6,
+        "privilege_level": 4,
+        "is_anomaly": true,
+        "mitre_attack": {
+          "tactic": "Defense Evasion",
+          "technique": "Impair Defenses: Disable Cloud Logs",
+          "technique_id": "T1562.008"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "StopLogging",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-590bedaf",
+    "sequence_number": 6,
+    "tags": [
+      "aws",
+      "high_impact_&_tampering",
+      "success"
+    ]
+  },
+  {
+    "id": "log-280f7e6146c6",
+    "timestamp": "2026-10-20T16:28:50.188757+00:00",
+    "cloud_provider": "aws",
+    "service": "sts",
+    "action": "sts:AssumeRole",
+    "activity_name": "Assume Role (SecurityAdminRole)",
+    "status": "success",
+    "privilege_level": 3,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Privilege Escalation",
+      "technique": "Subvert Trust Controls: Assume Role",
+      "technique_id": "T1548"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROABAB575F094CF461F:session-edaf",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA3CF7EB354ABA424F",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA6BDD383A347B401E",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:28:50Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:28:50Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::987654321098:role/SecurityAdminRole",
+        "roleSessionName": "session-e531f6"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIAE507D4D05CBF4554",
+          "expiration": "2026-10-20T16:28:50.188733+00:00"
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROA6463A6C87B6E4360:session-e531f6",
+          "arn": "arn:aws:iam::987654321098:role/SecurityAdminRole/session-e531f6"
+        }
+      },
+      "requestID": "567fe36e-211a-4d87-8724-cec9d0e0a2f0",
+      "eventID": "b6c78cb9-ba04-4c3e-96b2-26a02e1f6891",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-590bedaf",
+        "sequence_index": 5,
+        "privilege_level": 3,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Privilege Escalation",
+          "technique": "Subvert Trust Controls: Assume Role",
+          "technique_id": "T1548"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "AssumeRole",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-590bedaf",
+    "sequence_number": 5,
+    "tags": [
+      "aws",
+      "iam_&_escalation",
+      "success"
+    ]
+  },
+  {
+    "id": "log-056f719d140f",
+    "timestamp": "2026-10-20T16:28:50.184581+00:00",
+    "cloud_provider": "aws",
+    "service": "ec2",
+    "action": "ec2:RunInstances",
+    "activity_name": "Run EC2 Instance",
+    "status": "success",
+    "privilege_level": 2,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Execution",
+      "technique": "Cloud Instance Deployment",
+      "technique_id": "T1578.002"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAF372AFA7B7814E02:session-edaf",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA5FC97064CF234079",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROAA58B26857EC24F42",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:28:50Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:28:50Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "instanceType": "t3.xlarge",
+        "imageId": "ami-0c55b159cbfafe1f0",
+        "count": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {
+              "instanceId": "i-02602f57767234401",
+              "currentState": {
+                "code": 0,
+                "name": "pending"
+              },
+              "instanceType": "t3.xlarge"
+            }
+          ]
+        }
+      },
+      "requestID": "a4403cc7-e1b5-4224-a1b2-eab2fd87d467",
+      "eventID": "b2125df2-870e-46cf-9824-2b623713e45c",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-590bedaf",
+        "sequence_index": 4,
+        "privilege_level": 2,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Execution",
+          "technique": "Cloud Instance Deployment",
+          "technique_id": "T1578.002"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "RunInstances",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-590bedaf",
+    "sequence_number": 4,
+    "tags": [
+      "aws",
+      "resource_mutation",
+      "success"
+    ]
+  },
+  {
+    "id": "log-e3b9c00a5303",
+    "timestamp": "2026-10-20T16:28:50.179425+00:00",
+    "cloud_provider": "aws",
+    "service": "ec2",
+    "action": "ec2:DescribeInstances",
+    "activity_name": "Describe EC2 Instances",
+    "status": "success",
+    "privilege_level": 1,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Discovery",
+      "technique": "System Information Discovery",
+      "technique_id": "T1082"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA4FD9C555B55E47D3:session-edaf",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA2221A969466C4AE8",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA55B9F05FBBEC4826",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:28:50Z",
+            "mfaAuthenticated": "false"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:28:50Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": {
+        "reservationSet": [
+          {
+            "reservationId": "r-41bdd5a95d"
+          }
+        ]
+      },
+      "requestID": "93ee1b38-7fe6-4866-866e-1e4d4ac6748b",
+      "eventID": "af22e503-f05d-454a-bd12-e85f61eff290",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-590bedaf",
+        "sequence_index": 3,
+        "privilege_level": 1,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Discovery",
+          "technique": "System Information Discovery",
+          "technique_id": "T1082"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "DescribeInstances",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-590bedaf",
+    "sequence_number": 3,
+    "tags": [
+      "aws",
+      "discovery",
+      "success"
+    ]
+  },
+  {
+    "id": "log-9e5399844c6f",
+    "timestamp": "2026-10-20T16:28:50.175535+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "success",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACB7673E9F05A408B",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIA898E768EFE9142E2",
+        "userName": "ria_developer"
+      },
+      "eventTime": "2026-10-20T16:28:50Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "requestID": "3c70d1c1-671e-4dcc-91d3-f28d16810235",
+      "eventID": "b52d5399-8984-4bce-a9f6-e59dfbe1cd44",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-590bedaf",
+        "sequence_index": 2,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-590bedaf",
+    "sequence_number": 2,
+    "tags": [
+      "aws",
+      "authentication",
+      "success"
+    ]
+  },
+  {
+    "id": "log-1ab9fd784255",
+    "timestamp": "2026-10-20T16:28:50.147640+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "failure",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "unauthenticated_caller",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": "FailedAuthentication",
+    "error_message": "Invalid password",
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAB677682D72E8451F",
+        "arn": "arn:aws:iam::987654321098:user/unauthenticated_caller",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIA7CC5F0F5ABA24570",
+        "userName": "unauthenticated_caller"
+      },
+      "eventTime": "2026-10-20T16:28:50Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": null,
+      "requestID": "9cd1b629-f1c2-45f2-b914-35db6922bef6",
+      "eventID": "e1e7adad-09d9-4688-a1b8-c0a542f2aabd",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "errorCode": "FailedAuthentication",
+      "errorMessage": "Invalid password",
+      "_synth_metadata": {
+        "storyline_id": "sess-590bedaf",
+        "sequence_index": 1,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "failure"
+      }
+    },
+    "session_id": "sess-590bedaf",
+    "sequence_number": 1,
+    "tags": [
+      "aws",
+      "authentication",
+      "failure"
+    ]
+  },
+  {
+    "id": "log-461b15db4145",
+    "timestamp": "2026-10-20T16:28:09.582278+00:00",
+    "cloud_provider": "aws",
+    "service": "ec2",
+    "action": "ec2:DescribeInstances",
+    "activity_name": "Describe EC2 Instances",
+    "status": "success",
+    "privilege_level": 1,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Discovery",
+      "technique": "System Information Discovery",
+      "technique_id": "T1082"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA7F975D460ED44271:session-5683",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "ASIA9E7D90ED2993450B",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROA7CFD10721DAC4C67",
+            "arn": "arn:aws:iam::987654321098:user/ria_developer",
+            "accountId": "987654321098",
+            "userName": "CloudAdminRole"
+          },
+          "webIdFederationData": {},
+          "attributes": {
+            "creationDate": "2026-10-20T16:28:09Z",
+            "mfaAuthenticated": "false"
+          }
+        }
+      },
+      "eventTime": "2026-10-20T16:28:09Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": {
+        "reservationSet": [
+          {
+            "reservationId": "r-a48e61784e"
+          }
+        ]
+      },
+      "requestID": "848b46e0-d0d0-48e9-a4f6-b8996bad3ebe",
+      "eventID": "211fbcd9-cbec-4083-af6c-d5ceb78f57cb",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-6c635683",
+        "sequence_index": 3,
+        "privilege_level": 1,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Discovery",
+          "technique": "System Information Discovery",
+          "technique_id": "T1082"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "DescribeInstances",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-6c635683",
+    "sequence_number": 3,
+    "tags": [
+      "aws",
+      "discovery",
+      "success"
+    ]
+  },
+  {
+    "id": "log-d761ff5cd503",
+    "timestamp": "2026-10-20T16:28:09.578581+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "success",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "ria_developer",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": null,
+    "error_message": null,
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAA4426EF62F7E4106",
+        "arn": "arn:aws:iam::987654321098:user/ria_developer",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIA78DF94B7D0624668",
+        "userName": "ria_developer"
+      },
+      "eventTime": "2026-10-20T16:28:09Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "requestID": "5bbb293d-28ff-4946-af0f-1040528dc390",
+      "eventID": "c92a8ab0-a37c-4c80-8b14-5831cd541d27",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "_synth_metadata": {
+        "storyline_id": "sess-6c635683",
+        "sequence_index": 2,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "success"
+      }
+    },
+    "session_id": "sess-6c635683",
+    "sequence_number": 2,
+    "tags": [
+      "aws",
+      "authentication",
+      "success"
+    ]
+  },
+  {
+    "id": "log-d0f490de455f",
+    "timestamp": "2026-10-20T16:28:09.571972+00:00",
+    "cloud_provider": "aws",
+    "service": "signin",
+    "action": "signin:ConsoleLogin",
+    "activity_name": "AWS Console Login",
+    "status": "failure",
+    "privilege_level": 0,
+    "is_anomaly": false,
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique": "Valid Accounts: Cloud Accounts",
+      "technique_id": "T1078.004"
+    },
+    "principal": "unauthenticated_caller",
+    "source_ip": "12.158.45.22",
+    "region": "us-east-1",
+    "error_code": "FailedAuthentication",
+    "error_message": "Invalid password",
+    "raw_event": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAFFD472FF1DC646DE",
+        "arn": "arn:aws:iam::987654321098:user/unauthenticated_caller",
+        "accountId": "987654321098",
+        "accessKeyId": "AKIA3D7BDE6DFE27400B",
+        "userName": "unauthenticated_caller"
+      },
+      "eventTime": "2026-10-20T16:28:09Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "12.158.45.22",
+      "userAgent": "AWS Console CloudTrail/Client (Chrome 128.0.0; Windows NT 10.0)",
+      "requestParameters": {
+        "mfaUsed": "Yes"
+      },
+      "responseElements": null,
+      "requestID": "eef4378f-9608-4406-82e6-4fee58d9e926",
+      "eventID": "e2c25adb-6648-4003-aa99-b62c75ae70bc",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "987654321098",
+      "eventCategory": "Management",
+      "errorCode": "FailedAuthentication",
+      "errorMessage": "Invalid password",
+      "_synth_metadata": {
+        "storyline_id": "sess-6c635683",
+        "sequence_index": 1,
+        "privilege_level": 0,
+        "is_anomaly": false,
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique": "Valid Accounts: Cloud Accounts",
+          "technique_id": "T1078.004"
+        },
+        "cloud_provider": "aws",
+        "manual_action": "ConsoleLogin",
+        "status": "failure"
+      }
+    },
+    "session_id": "sess-6c635683",
+    "sequence_number": 1,
+    "tags": [
+      "aws",
+      "authentication",
+      "failure"
+    ]
+  }
+]
